@@ -1,0 +1,12 @@
+.dark-mode:root {
+    --bg-color: #7A7A7A;
+}
+
+:root{
+    --bg-color: #f9f9f9; 
+    --container-bg-color: #f9f9f9;
+}
+
+body {
+    background: var(--bg-color);
+}

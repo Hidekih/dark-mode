@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dark Mode">
+    <meta name="author" content="Alexande Hideki Siroma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dark Mode</title>
+</head>
+<body>
+    <button onclick="changeMode()">Theme</button>
+
+    <script>
+        function changeMode() {
+            const htmlEl = document.querySelector("html");
+            const isOnDarkmode = !!htmlEl.classList.contains("dark-mode");
+
+            isOnDarkmode 
+                ? htmlEl.classList.remove("dark-mode") 
+                : htmlEl.classList.add("dark-mode");
+        }
+    </script>
+</body>
+</html>
