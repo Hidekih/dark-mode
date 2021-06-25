@@ -1,127 +1,137 @@
 .dark-mode:root {
-    --main-bg-color: #332F2E;
-    --main-text-color: #E0E0E0;
-    --secondary-text-color: #d9d9b9;
-    --border-color: #808080;
-    --event-button:#0D8CFF;
+  --main-bg-color: #332f2e;
+  --main-text-color: #e0e0e0;
+  --secondary-text-color: #d9d9b9;
+  --border-color: #808080;
+  --event-button: #0d8cff;
 }
 
-:root{
-    --main-bg-color: #f9f9f9; 
-    --main-text-color: #405;
-    --secondary-text-color: #222;
-    --border-color: #332F2E;
-    --event-button: #0000BF;
+:root {
+  --main-bg-color: #f9f9f9;
+  --main-text-color: #405;
+  --secondary-text-color: #222;
+  --border-color: #332f2e;
+  --event-button: #0000bf;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-span, p, button, h1 { font-family: Arial; }
+span,
+p,
+button,
+h1 {
+  font-family: Arial;
+}
 
 body {
-    background: var(--main-bg-color);
-    height: 100%;
-    transition: background 0.4s;
+  background: var(--main-bg-color);
+  height: 100%;
+  transition: background 0.4s;
 }
 
 #container {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 #page-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 180px;
-    border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 180px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 #page-header span {
-    font-weight: 700;
-    color: var(--main-text-color);
-    transition: color 0.4s;
+  font-weight: 700;
+  color: var(--main-text-color);
+  transition: color 0.4s;
 }
 
 #change-theme-button {
-    padding: 3px 9px;
-    background: var(--main-bg-color);
-    color: var(--secondary-text-color);
-    font-weight: bold;
-    border: 1px solid var(--border-color);
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
+  padding: 3px 9px;
+  background: var(--main-bg-color);
+  color: var(--secondary-text-color);
+  font-weight: bold;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
 
-    transition: color .2s;
+  transition: color 0.2s;
 }
 
 #content {
-    display: flex;
-    padding: 0 180px;
-    margin: 16px 0;
+  display: flex;
+  padding: 0 180px;
+  margin: 16px 0;
 }
 
-#content #side-menu{
-    width: 180px;
-    border-right: 1px solid var(--border-color);
+#content #side-menu {
+  width: 180px;
+  border-right: 1px solid var(--border-color);
 }
 
 #feed {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-#feed .feed-content + .feed-content { margin-top: 16px; }
+#feed .feed-content + .feed-content {
+  margin-top: 16px;
+}
 
 .feed-content {
-    padding: 16px;
-    height: auto;
-    width: 100%;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+  padding: 16px;
+  height: auto;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
 }
 
-.feed-content h1{
-    color: var(--main-text-color);
-    transition: color 0.4s;
+.feed-content h1 {
+  color: var(--main-text-color);
+  transition: color 0.4s;
 }
 
 .feed-content p {
-    height: 74px;
-    margin-top: 16px;
-    color: var(--secondary-text-color);
-    overflow: hidden;
-    transition: color 0.4s;
+  height: 74px;
+  margin-top: 16px;
+  color: var(--secondary-text-color);
+  overflow: hidden;
+  transition: color 0.4s;
 }
 
-.feed-content p.open{ height: auto; }
+.feed-content p.open {
+  height: auto;
+}
 
 .feed-content button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: var(--event-button);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--event-button);
+  margin-top: 8px;
+  font-size: 16px;
 
-    transition: color 0.4s;
+  transition: color 0.4s;
 }
 
 #page-footer {
-    padding: 12px 0;
-    margin: 0 180px;
-    border-top: 1px solid var(--border-color);
+  padding: 12px 0;
+  margin: 0 180px;
+  border-top: 1px solid var(--border-color);
 }
 
 #page-footer p {
-    text-align: center;
-    font-weight: 700;
-    color: var(--main-text-color);
-    transition: color 0.4s;
+  text-align: center;
+  font-weight: 700;
+  color: var(--main-text-color);
+  transition: color 0.4s;
 }
