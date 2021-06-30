@@ -1,17 +1,21 @@
 .dark-mode:root {
-  --main-bg-color: #332f2e;
-  --main-text-color: #e0e0e0;
-  --secondary-text-color: #d9d9b9;
-  --border-color: #808080;
-  --event-button: #0d8cff;
+  --bg-color: #3b3b3b;
+  --bg-color-secondary: #474747;
+  --title-color: #f9f9f9;
+  --text-color: #e0e0e0;
+  --border-color: #f9f9f9;
+  --event-button-color: #0d8cff;
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 :root {
-  --main-bg-color: #f9f9f9;
-  --main-text-color: #405;
-  --secondary-text-color: #222;
-  --border-color: #332f2e;
-  --event-button: #0000bf;
+  --bg-color: #f9f9f9;
+  --bg-color-secondary: #ffffff;
+  --title-color: #13181e;
+  --text-color: #333;
+  --border-color: #13181e;
+  --event-button-color: #0000bf;
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -27,19 +31,22 @@ h2 {
   font-family: Arial;
 }
 
-body {
-  background: var(--main-bg-color);
+#container {
+  position: relative;
+  display: block;
+  min-height: 100vh;
+  background: var(--bg-color);
   transition: background 0.4s;
 }
 
 header {
   position: fixed;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-  height: 58px;
+  height: 48px;
   top: 0;
   right: 0;
   left: 0;
-  background: var(--main-bg-color);
+  box-shadow: 0 0 12px var(--shadow);
+  background: var(--bg-color);
 }
 
 header div {
@@ -47,25 +54,27 @@ header div {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 0 16px;
 }
 
-#page-header span {
+header span {
+  letter-spacing: 1px;
   font-weight: 700;
-  color: var(--main-text-color);
+  color: var(--title-color);
   transition: color 0.4s;
 }
 
 #change-theme-button {
   padding: 4px 8px;
-  background: var(--main-bg-color);
-  color: var(--secondary-text-color);
+  box-shadow: 0 0 4px var(--shadow);
+  background: var(--bg-color-secondary);
+  color: var(--text-color);
   font-weight: bold;
-  border: 1px solid var(--border-color);
+  border: 0;
   border-radius: 4px;
-  outline: none;
   cursor: pointer;
 
   transition: color 0.2s;
@@ -73,8 +82,8 @@ header div {
 
 main {
   display: flex;
-  margin: 90px auto 0;
-  padding: 0 16px;
+  margin: 0 auto;
+  padding: 90px 0px;
   width: 100%;
   max-width: 900px;
 }
@@ -85,27 +94,28 @@ main {
   flex: 1;
 }
 
-#feed .feed-content + .feed-content {
-  margin-top: 16px;
-}
-
 .feed-content {
-  padding: 16px;
-  height: auto;
   width: 100%;
-  border: 1px solid var(--border-color);
+  padding: 16px;
+  background: var(--bg-color-secondary);
+  box-shadow: 2px 2px 12px var(--shadow);
   border-radius: 8px;
 }
 
+.feed-content + .feed-content {
+  margin-top: 16px;
+}
+
 .feed-content h2 {
-  color: var(--main-text-color);
+  color: var(--title-color);
+  letter-spacing: 1px;
   transition: color 0.4s;
 }
 
 .feed-content p {
   height: 74px;
   margin-top: 16px;
-  color: var(--secondary-text-color);
+  color: var(--text-color);
   overflow: hidden;
   transition: color 0.4s;
 }
@@ -118,7 +128,7 @@ main {
   cursor: pointer;
   border: none;
   background: transparent;
-  color: var(--event-button);
+  color: var(--event-button-color);
   margin-top: 8px;
   font-size: 16px;
 
@@ -126,18 +136,28 @@ main {
 }
 
 footer {
-  margin-top: 32px;
-  width: 100%;
-  border-top: 1px solid var(--border-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 48px;
+  padding: 0 16px;
 }
 
 footer div {
-  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid var(--shadow);
 }
 
 footer p {
   text-align: center;
   font-weight: 700;
-  color: var(--main-text-color);
+  color: var(--title-color);
   transition: color 0.4s;
 }
